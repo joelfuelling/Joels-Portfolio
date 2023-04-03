@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gameboard">
+        <div class="wordgame">
+            <header>Word Game</header>
+        </div>
+        <div class="instructions">
+            <main><span class="welcome"></span>Welcome! Please read the rules before you play:</span><br>1 - The idea of the game is to start with any word and add it  by either clicking 'Add Word', or pressing enter. <br> 2 - If you click the countdown timer during the 60 second countdown, it will reset the timer and clear the current list.</main>
+        </div>
+
+        <div class="interactions">
+            <div class="countdown">
+                <button id="timer">Start Countdown!
+                </button>
+            </div>
+            <div class="input">
+                <input type="text" name="new-word" id="new-word-input">
+            </div>
+            <div class="button">
+                <button id="add-word-button" >Add Word
+                </button>
+            </div>
+        </div>
+        <div class="words">
+            <ul id="words-list">
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

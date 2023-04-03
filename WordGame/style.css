@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+* {
+
+    /* height & width now includes border & padding */
+    box-sizing: border-box;
+
+}
+body {
+    background-color: rgb(133, 131, 131);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+.gameboard {
+    
+    width: 50vh;
+    height: 80vh;
+    font-family: Helvetica;
+    display: grid;
+    grid-template-rows: 75px 150px auto 50px;
+    grid-template-columns: 1fr;
+    align-content: space-evenly;
+    justify-items: center;
+    grid-template-areas: 
+        "title"
+        "instructions"
+        "interactions"
+        "list"
+    }
+
+.wordgame {
+    position: absolute;
+    margin: 8px;  
+    background-color: white;
+    width: 90%;
+    text-align: center;
+    font-size: 42px;
+    font-family: 'Righteous', cursive;
+    border: 8px double rgba(184, 15, 15, 0.886);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    grid-area: title;
+}
+
+.instructions {
+    padding-left: 40px;
+    padding-right: 40px;
+    color:rgba(63, 214, 17, 0.886);
+    font-family: 'Righteous', cursive;
+    grid-area: instructions;
+}
+.interactions {
+    border: 1px solid rgba(4, 4, 4, 0.249);
+    border-radius: 12px;
+    padding: 6px;
+    grid-area: interactions;
+}
+
+.countdown, .input, .button {
+    text-align: right;
+    border-radius: 8px;
+}
+#words-list {
+    list-style: none;
+    border: 2px solid rgba(184, 15, 15, 0.206);
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 13px;
+}
+
+
+.wordgame, .instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 500px){
+body {
+    background-color:rgba(219, 191, 143, 0.472)
+}
+.gameboard {
+    align-content: center;
+}.wordgame { 
+    position: relative;
+    font-style: oblique;
+    background-color: black; 
+    width: 85%%;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Righteous', cursive;
+    border: 8px double rgba(216, 148, 96, 0.68);
+    border-radius: 40px;
+    grid-area: title;
+    color: white;
+    }
+.countdown, .input, .button {
+        text-align: center;
+}
+.instructions {
+    font-size: 14px;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    color:rgba(184, 15, 15, 0.886);
+    font-family: 'Righteous', cursive;
+    grid-area: instructions;
+}

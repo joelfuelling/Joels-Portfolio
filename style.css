@@ -1,9 +1,59 @@
+@media screen and (max-width: 500px) {
+
+    .nav-buttons {
+    display: none;
+    }
+
+    #slideshow-container {
+        display: none;
+    }
+
+    .headerface {
+        height: 150px;
+        background-color: rgba(28, 31, 35, 1);
+    }
+
+    .myface {
+        max-height: 95px;
+        max-width: 100px;
+        position: relative;
+        margin-left: auto;
+        left: -100px;
+    }
+
+    .contents {
+        font-size: 18px;
+    }
+
+    .projectboxes {
+        height: 90%;
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .nav-buttons {
+        display: none;
+    }
+}
+
+
+
 *{
     margin: 0;
     /* border: 1px solid pink; */
 }
+/* html {
+    height: 100%;
+
+} */
 body {
+    height: 100%;
+    width: 100%;
+    color:antiquewhite;
+    background-color: rgba(28, 33, 40, 1);
     text-align: center;
+    align-content: center;
     display: grid;
 }
 .header-nav {
@@ -12,13 +62,64 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    text-align: cnet;
+    text-align: center;
+}
+.header-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons {
+    padding: 2px;
+    color:rgb(5, 31, 37);
 }
 .myface {
-    margin-top: 25px;
     height: 80%;
 }
+
 .headerface {
     height: 225px;
-    background-color: rgba(28, 31, 34, 1);
+    background-color: rgba(28, 33, 40, 1);
 }
+.section-title {
+    font-size: 20px;
+    padding: 1.2em;
+    border-bottom: 4px dotted rgb(96, 78, 55);
+    border-radius: 20px;
+}
+.slideshow-pictures {
+    display: relative;
+    margin: 30px;
+}
+
+.contents {
+    text-align: center;
+    max-width: 600px;
+}
+
+.projects {
+    display: relative;
+    margin: 20px;
+    margin-bottom: 20px;
+    align-content: center;
+}
+.projectboxes {
+    align-items: center;
+    width: 175px;
+    margin-bottom: 15px;
+    border: 2px solid white;
+}
+
+footer {
+    border-top: .1em solid rgb(14, 14, 18);  
+    padding-top: 30px;
+    color:rgb(121, 80, 27);
+    font-size: 12px;
+    height: 80px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+}
+
