@@ -43,6 +43,7 @@
 
 *{
     margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* border: 1px solid pink; */
 }
 
@@ -154,6 +155,7 @@ footer {
     display: none;
     position: absolute;
 }
+
 /* 2 - Setup the dropdown links */
 .dropdown-links a { /* OK - We got it to show up! But, it's behind the header box even with z-index 3*/
     position: relative;
