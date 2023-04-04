@@ -1,0 +1,15 @@
+.dropmenu {
+    position: absolute;
+    right: 10px;
+    display: inline-block;
+}
+
+.dropdown-links {
+    display: none;
+}
+
+.classtoggle {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+}

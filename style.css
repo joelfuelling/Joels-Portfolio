@@ -1,15 +1,23 @@
 @media screen and (max-width: 500px) {
+
     .navbar-face {
         margin-top: 4px;
-        margin-left: -70px;
-        max-height: 55px;
+        margin-left: -40px;
+        max-height: 65px;
     }
-    #top-navbar {
+
+    #top-navbar { 
         height: 65px;
         background-color: rgb(121, 80, 27);
     }
+
     .nav-buttons {
         display: none;
+    }
+
+    .dropmenu {
+        background-color: rgb(153, 97, 24);
+        width: 4em;
     }
 
     #slideshow-container {
@@ -28,9 +36,8 @@
         height: 90%;
         margin-top: 8px;
     }
+
 }
-
-
 
 
 *{
@@ -40,46 +47,72 @@
 
 body {
     margin: auto;
-    height: 100%;
-    width: 100%;
     color:antiquewhite;
     background-color: rgba(28, 33, 40, 1);
     text-align: center;
     align-content: center;
     display: grid;
 }
+
+.headergap {
+    height: 65px;
+}
+
 .header-nav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 56px;
+    height: 65px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    text-align: center;
+ 
 }
 .header-items {
     display: flex;
     align-items: center;
 }
 
-.nav-buttons {
+.nav-buttons, .project-buttons {
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 7px 12px;
+    border-color:aliceblue;
     background-color: rgb(121, 80, 27);
     color: antiquewhite;
+    cursor: pointer;
 }
+
+.nav-buttons:hover, .project-buttons:hover {
+    border-color: #1d1928;
+    background-color: antiquewhite;
+    color: #286595;
+}
+
+.navbar-face {
+    width: 0;
+    height: 0;
+}
+
 .myface {
     display: relative;
     justify-content: center;
     height: 80%;
 }
 
-
 .burger {
-    display: show;
+    background: transparent;
+    margin-top: 6px;
+    width: 4em;
 }
 
-.headerface {
+#headerface {
     height: 225px;
     background-color: rgba(28, 33, 40, 1);
 }
+
 .section-title {
     text-align: center;
     font-size: 20px;
@@ -91,41 +124,48 @@ body {
 .contents {
     margin: auto;
     max-width: 600px;
+    overflow: auto;
 }
+
 .slideshow-pictures {
     display: none;
-    padding-top: 40px;
-    max-width: 70%;
-    max-height: 80%;
+    padding: 80px 0;
+    max-width: 292px;
+    max-height: 440px;
     display: relative;
     margin: auto;
 }
-
-
 
 .projects {
-    display: relative;
     margin: 20px;
-    margin-bottom: 20px;
-    align-content: center;
 }
+
 .projectboxes {
-    margin: auto;
-    width: 175px;
     margin-bottom: 15px;
-    border: 2px solid white;
 }
 
 footer {
-    border-top: .1em solid rgb(14, 14, 18);  
+    border-top: .2em solid rgb(14, 14, 18);  
     padding-top: 30px;
-    color:rgb(121, 80, 27);
+    color:rgb(136, 103, 59);
     font-size: 12px;
-    height: 80px;
+    height: 50px;
 }
 
+/* drop down menu - WORK IN PROGRESS*/
+.classon {
+    display: block;
+    visibility: visible;
+}
 
-@media screen and (max-width: 1024px) {
+.dropdown-links {
+    display: none;
+}
 
+@media screen and (min-width: 1024px) {
+
+    .dropmenu {
+        display: none;
+    }
 }
 

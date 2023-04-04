@@ -25,3 +25,21 @@ Saturday/Sunday (3/1/23) - Added starting layout using mobile first methodology.
     "https://unpkg.com/@primer/css@^18.0.0/dist/primer.css"
     Class notes and videos around functions, lists, and DOM manipulation.
 
+# Monday (3/2/23)
+
+Monday (3/2/23) 
+    - With some help by Angel in slack, I got the slideshow setup the way I want it now. I had to put the (mySlides[slide index].style.display = "block") outside the function so that the 1st image would show up before the slideShow function begins.
+    - Navbar is locked to the top of screen.
+        - burger menu icon still showing up in between mobile and large desktop views.
+        - Still working on trying to get a transparent background for menu but thats not a big deal.
+        - I want a small picture of my face to show up in the top left corner of the nav in phone display, but it was not showing up (CSS class issue likely...)
+    - Added CSS to buttons.
+    - *Trying* to clean up my CSS a bit. Some of it has been experimental and not all of it applies anymore.
+    - Added Git button and link.
+    - Began constructing Nav Bar but JS tripped me up a little so I need to review before moving forward with construction.
+
+    Some resources used today... I used chat GPT to help my try and "clean up" my CSS but it actually didn't help me at all, it just gave me other ways to do similar things. I'm still learning how to prompt it in a way to get the optimal results.
+
+    stackoverflow.com/questions/68932531/how-to-show-dropdown-menu-when-clicked
+    https://replit.com/@JoelFuelling/Dropdown-Menu-Lab-3#style.css
+    https://stackoverflow.com/questions/8762201/how-to-get-the-cursor-to-change-to-the-hand-when-hovering-a-button-tag
