@@ -43,3 +43,11 @@ Monday (3/2/23)
     stackoverflow.com/questions/68932531/how-to-show-dropdown-menu-when-clicked
     https://replit.com/@JoelFuelling/Dropdown-Menu-Lab-3#style.css
     https://stackoverflow.com/questions/8762201/how-to-get-the-cursor-to-change-to-the-hand-when-hovering-a-button-tag
+
+# Tuesday (3/3/23)
+
+Monday (3/2/23)
+    - Looked up "how to create darkmode button" as thats the 3rd feature I want to add. W3 link with super simple example is below.
+
+
+    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_dark_mode
