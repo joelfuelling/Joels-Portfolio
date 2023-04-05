@@ -6,8 +6,8 @@ So far, lots of class notes, rewatching some video portions (functions, arrays, 
 
 Saturday/Sunday (3/1/23) - Added starting layout using mobile first methodology.
     - The main addition is the (incomplete) 'setInterval(Slideshow, 3000) function'. Getting it to "start over" was the challenge. The modulus operator came in very handy but it's not done...
-        - It starts with all 3 loaded up (because they're on the HTML), but I don't want that. Not sure how to fix it but I'll look at it.
-        - I want them to show up one at a time, for 3 seconds each, not all at once, and flexing to and from.
+    - It starts with all 3 loaded up (because they're on the HTML), but I don't want that. Not sure how to fix it but I'll look at it.
+    - I want them to show up one at a time, for 3 seconds each, not all at once, and flexing to and from.
 
     - Need to implement dropdown menu for Resume, Linked in, possibly (a feature) that when projects is clicked it scrolls to that section of the page. Research will need done to implement that feature if desired.
 
@@ -28,9 +28,9 @@ Saturday/Sunday (3/1/23) - Added starting layout using mobile first methodology.
 Monday (3/2/23) 
     - With some help by Angel in slack, I got the slideshow setup the way I want it now. I had to put the (mySlides[slide index].style.display = "block") outside the function so that the 1st image would show up before the slideShow function begins.
     - Navbar is locked to the top of screen.
-        - burger menu icon still showing up in between mobile and large desktop views.
-        - Still working on trying to get a transparent background for menu but thats not a big deal.
-        - I want a small picture of my face to show up in the top left corner of the nav in phone display, but it was not showing up (CSS class issue likely...)
+    - burger menu icon still showing up in between mobile and large desktop views.
+    - Still working on trying to get a transparent background for menu but thats not a big deal.
+    - I want a small picture of my face to show up in the top left corner of the nav in phone display, but it was not showing up (CSS class issue likely...)
     - Added CSS to buttons.
     - *Trying* to clean up my CSS a bit. Some of it has been experimental and not all of it applies anymore.
     - Added Git button and link.
@@ -62,3 +62,6 @@ Tuesday (3/3/23)
 # Wednesday (3/3/23)
 
 Wednesday (3/3/23) 
+    - See WordGame README for changes made to game functionality.
+    Some resources used so far today.
+    - https://github.com/takis-fuego-cohort/lessons-and-labs/blob/main/Unit_1/04-dom/4.1.1-dom-menu-lab-part-1.md

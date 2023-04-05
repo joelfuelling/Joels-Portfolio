@@ -47,7 +47,7 @@ body {
 .instructions {
     padding-left: 40px;
     padding-right: 40px;
-    color:rgba(63, 214, 17, 0.886);
+    color:rgba(184, 15, 15, 0.886);
     font-family: 'Righteous', cursive;
     grid-area: instructions;
 }
@@ -60,7 +60,7 @@ body {
 
 .countdown, .input, .button {
     text-align: right;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 #words-list {
     list-style: none;
@@ -106,4 +106,4 @@ body {
     color:rgba(184, 15, 15, 0.886);
     font-family: 'Righteous', cursive;
     grid-area: instructions;
-}
+}}

@@ -8,15 +8,25 @@ const dropdownBtn = document.querySelector(".dropbutton-class")
 
 const dropdownMenu = document.querySelector(".dropdown-links")
 
-const html = document.querySelector(".html")
-// Setup the class toggle by the button click - WHOOT! We've got links showing up, crudely, but they are there.
+// Setup the class toggle by the button click.
 dropdownBtn.addEventListener("click", function(evt) {
     dropdownMenu.classList.toggle('show')
 });
 
-// Setting up the menu to close if clicked outside of it?
-html.addEventListener("click", function (evt) { // 'this' means window in global space :0 COOL!      
-    if(evt.target !== dropdownMenu && dropdownMenu.classList === "show") {
+
+
+// Closing the dropdown menu when a link is clicked.
+
+// dropdownMenu.forEach((link) => {
+
+// })
+
+// // Setting up the menu to close if clicked outside of it?
+
+const body = document.querySelector("body")
+
+body.addEventListener("click", function (evt) {
+    if(evt.target === dropdownMenu && dropdownMenu.classList === "show") {
         dropdownMenu.classList.toggle('show')
     }
 })

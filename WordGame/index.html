@@ -13,16 +13,16 @@
             <header>Word Game</header>
         </div>
         <div class="instructions">
-            <main><span class="welcome"></span>Welcome! Please read the rules before you play:</span><br>1 - The idea of the game is to start with any word and add it  by either clicking 'Add Word', or pressing enter. <br> 2 - If you click the countdown timer during the 60 second countdown, it will reset the timer and clear the current list.</main>
+            <main><span class="welcome">Welcome!</span> Please read the rules:</span><br>1 - To start, click the "Start Countdown" button. From there you'll have 60 seconds to add words to the text field below. <br> 2 - Pick any word to start but remember, each new words first letter must be the same as the letter from the perviously entered word.</main>
         </div>
 
         <div class="interactions">
             <div class="countdown">
-                <button id="timer">Start Countdown!
+                <button id="timer">Start Countdown
                 </button>
             </div>
             <div class="input">
-                <input type="text" name="new-word" id="new-word-input">
+                <input type="text" onfocus="this.value=''" value="Begin..." name="new-word" id="new-word-input">
             </div>
             <div class="button">
                 <button id="add-word-button" >Add Word

@@ -1,104 +1,114 @@
-let sec = 60;
-let timerInterval;
-const buttonClick = document.querySelector("#timer");
+let sec = 60
+let timerInterval
+const countdown = document.querySelector("#timer")
 
 function myTimer() {
-  timer.innerHTML = `${sec} seconds remaining`;
+  timer.innerHTML = `${sec} seconds remaining`
   if (sec > 0) {
-    sec--; 
+    sec-- 
   } else { 
-    resetCountdown();
-    buttonClick.disabled = false;
+    resetCountdown()
   }
 }
 
+function resetCountdown() {
+  wordsUsed = []
+  clearInterval(timerInterval)
+  timerInterval = null
+  sec = 60
+  timer.innerHTML = "Start Countdown"
+  newWordInputElement.defaultValue = "Click timer ^";
+}
 
-buttonClick.addEventListener('click', () => {
-  if (!timerInterval) { // if false is true
-    wordsListElement.innerHTML = ""
-    timerInterval = setInterval(myTimer, 1000); // setInterval (run the specificed function (myTimer), every second (1000 miliseconds), starting at 60... I could probably do a loop here but I'm not sure if it would be more efficient since we're counting down and doing things at 0, or else it's clicked.)
-  } else {
-    wordsListElement.innerHTML = "";
-    wordsUsed = []
-    resetCountdown();   
-  }
-});
-  
 
 
 // MODEL => HOLDS THE STATE OF THE APPLICATION
-let wordsUsed = [];
+let wordsUsed = []
+
 // CACHED DOM ELEMENTS
 const wordsListElement = document.querySelector("#words-list")
 const addWordButtonElement = document.querySelector("#add-word-button")
 const newWordInputElement = document.querySelector("#new-word-input")
+
 // VIEW
 // WHEN THE APP STATE CHANGES, RE-RENDER THE VIEW
 function renderList(){
-    wordsListElement.innerHTML = "";
+    wordsListElement.innerHTML = ""
     // Loop through all the words in wordsUsed
     wordsUsed.forEach(function(word){
         // Create a new list item
-        newListItem = document.createElement('li');
+        newListItem = document.createElement('li')
         
         // Set the list item's text equal to that word
-        newListItem.innerText = word;
+        newListItem.innerText = word
         // Append the list item to my #words-list
         wordsListElement.append(newListItem)
     })
 }
+
 // CONTROLLER
 function handleWordAdd(newWord){
     if(wordsUsed.length === 0){
-        wordsUsed.push(newWord);
-        return renderList();
-    }
-    const firstLetterOfNewWord = newWord[0];
-    const lastWordInList = wordsUsed[wordsUsed.length - 1];
-    const lastLetterOfLastWordInList = lastWordInList[lastWordInList.length - 1];
-    if(lastLetterOfLastWordInList === firstLetterOfNewWord){
-        console.log("THIS IS A VALID SUBMISSION")
         wordsUsed.push(newWord)
-        renderList();
-    }else{
-        console.log("THIS IS NOT A VALID SUBMISSION")
-        console.log(`Your new word needs to start with ${lastLetterOfLastWordInList}`)
+        return renderList()
+    }
+    const firstLetterOfNewWord = newWord[0]
+    const lastWordInList = wordsUsed[wordsUsed.length - 1]
+    const lastLetterOfLastWordInList = lastWordInList[lastWordInList.length - 1]
+    if(lastLetterOfLastWordInList === firstLetterOfNewWord){
+        wordsUsed.push(newWord)
+        renderList()
+    } 
+    // if () {}
+    else{
+        alert(`Try again! Your new word needs to start with ${lastLetterOfLastWordInList}`)
     }
 }
 
 function respondToWordSubmit(){
-    
-    // Grab the text from the input
-    const newWordToAdd = newWordInputElement.value;
-    // Call the handleWordAdd function using that text
-    handleWordAdd(newWordToAdd)
-    // Clear the input field
-    newWordInputElement.value = "";
+    const newWordToAdd = newWordInputElement.value // Grab the text from the input
+    handleWordAdd(newWordToAdd) // Call the handleWordAdd function using that text
+    newWordInputElement.value = "" // Clear the input field
 }
+
+
 // SET UP EVENT LISTENERS
-addWordButtonElement.addEventListener("click", respondToWordSubmit)
-// Nice! Now, when we press enter, we trigger the button event listener :) DRY
-newWordInputElement.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        addWordButtonElement.click(); // you can call a click to a button event listenter by pressing Enter, there we gooo!
+addWordButtonElement.addEventListener("click", respondToWordSubmit) 
+
+newWordInputElement.addEventListener("keydown", (evt) => {
+    if (evt.key === "Enter") {
+        addWordButtonElement.click() // Pressing Enter "clicks" the 'Add Word' Button
+    }if (evt.key === "Escape") {
+      countdown.click() // Pressing Escape "clicks" the 'countdown' button which has built in state changes to "reset" the board. *** I had this as a separate listener just below this and thought DRY, and I remembered that you can use multiple ifs inside one bloc.
+    }if (newWordInputElement.contains()) {
+      alert("Entry must be 1 word only with no spaces or special characters")
     }
 })
-// This is not working yet and I'm not sure why. I created a unique class since the id is already used for the enter key... Does the ID overwrite this since IDs are a more unique classification, even if I place one class and one ID on the same HTML element?
-const escapeKeyInput = document.getElementById("add")
-escapeKeyInput.addEventListener("keypress", (event) => {
-     if (event.key === "Escape") {
-        resetCountdown();
-    }
+
+
+countdown.addEventListener('click', () => {
+  if (!timerInterval) { // if false is true
+    newWordInputElement.value = ""
+    wordsListElement.innerHTML = ""
+    timerInterval = setInterval(myTimer, 1000) // setInterval (run the specificed function (myTimer), every second (1000 miliseconds), starting at 60
+  } else { // Clicking the button (while the above if is "running") clears the input field, the list, and resets the countdown.
+    newWordInputElement.value = ""
+    wordsListElement.innerHTML = ""
+    resetCountdown()
+    alert("Better luck next time!")   
+  }
 })
+
+// I want to try to get a random game message (from the array below) to appear when the resetCountdown
+
+let resetCountdownAlertMessages = ["Better luck next time!", "That's OK, you can try again", "How did you do??", "GAME OVER", "PLAYER: 0 lives left", "Try playing without a mouse ;)", "Did you know, the average landspeed velocity of a unladed swallow is 24 miles per hour, or 11 meters per second?", "Deep breathe in, pause and hold - aaaaaaaaand a deep breathe out"]
+
+function resetMessage () {
+  math.floor(math.random())
+}
+
  
 
-function resetCountdown() {
-    clearInterval(timerInterval);
-    timerInterval = null;
-    sec = 60;
-    timer.innerHTML = "Start Countdown!";
-}
 
 
 
