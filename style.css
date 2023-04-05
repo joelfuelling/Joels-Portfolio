@@ -16,7 +16,7 @@
     }
 
     .dropmenu {
-
+        z-index: 1;
         background: transparent; 
         width: 4em;
     }
@@ -91,6 +91,7 @@ body {
     color: #286595;
 }
 
+
 .myface {
     display: relative;
     justify-content: center;
@@ -103,6 +104,9 @@ body {
     width: 4em;
 }
 
+.dropmenu {
+    z-index: 1;
+}
 .headerface {
     z-index: -1;
     height: 225px;
