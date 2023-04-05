@@ -30,11 +30,10 @@
     }
      
     .contents {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .projectboxes {
-        height: 90%;
         margin-top: 8px;
     }
 
@@ -95,7 +94,7 @@ body {
 .myface {
     display: relative;
     justify-content: center;
-    height: 20vh;
+    height: 16vh;
 }
 
 .burger {

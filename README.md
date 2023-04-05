@@ -59,4 +59,6 @@ Tuesday (3/3/23)
     - https://www.google.com/search?sxsrf=APwXEdcWr8KG_e-MonPrYM1fyPMsSgz2zw:1680631005445&q=what+can+override+z-index+in+CSS&spell=1&sa=X&ved=2ahUKEwifws-w5pD-AhVnlIkEHbcvCawQBSgAegQIBxAB&biw=1129&bih=893&dpr=2#kpvalbx=_3mQsZMGlN7unptQP_eaoiAY_30
     - https://github.com/takis-fuego-cohort/lessons-and-labs/blob/main/Unit_1/07-js-continued/7.5-js-this-keyword.md (using this in the global space)
 
-    
+# Wednesday (3/3/23)
+
+Wednesday (3/3/23) 
