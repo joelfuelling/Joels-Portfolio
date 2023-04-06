@@ -1,11 +1,17 @@
 // Dark mode functionality.
 
-let darkBox = document.getElementsByTagName('body')[0];
 let darkMode = document.getElementById('dark-mode')
 
-darkMode.addEventListener("click", function() {
+let bodyBox = document.getElementsByTagName('body')[0]; // this was a good targeting technique! link in README file.
+let instructionsBox = document.querySelector('.instructions')
+let wordGameBox = document.querySelector('.wordgame')
+
+
+darkMode.addEventListener("click", function() { // The listener both adjusts the button position within the label div, and toggles the night class set to the DOM objects set above.
   darkMode.classList.toggle('active')
-  darkBox.classList.toggle('night')
+  bodyBox.classList.toggle('night')
+  instructionsBox.classList.toggle('night')
+  wordGameBox.classList.toggle('night')
 })
 
 

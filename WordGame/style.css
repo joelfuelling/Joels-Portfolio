@@ -4,14 +4,16 @@
 @media screen and (max-width: 500px) {
 
     body {
-        background-color:rgba(219, 191, 143, 0.472)
+        background-color:rgba(219, 191, 143, 0.472);
+        display: grid;
+        grid-template-areas:
+        "title"
+        "instructions"
+        "interactions"
+        "list"
+
     }
 
-    label {
-        position: absolute;
-        width: 40px;
-    }
-    
     .gameboard {
         align-content: center;
     }
@@ -28,6 +30,7 @@
         border: 8px double rgba(216, 148, 96, 0.68);
         border-radius: 40px;
         grid-area: title;
+        
     }
     
     .countdown, .input, .button {
@@ -58,43 +61,13 @@ body {
     margin-top: 20px;
 }
 
-/* dark mode */
-label {
-    position: absolute;
-    width: 45px;
-    height: 26px;
-    right: 20px;
-    top: 40px;
-    border: 2px solid;
-    border-radius: 10px;
-}
-label:before {
-    font-size: 16px;
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-    content: "hi!";
-    width: 20px;
-    height: 20px;
-    left: 1px;
-    top: 1px;
-    border-radius: 38%;
-    cursor: pointer;
-    background-color: #000;
-    transition: 0.4s;
-}
-
-label.active:before {
-    left: 18px;
-    background: #fff;
-}
-/* Gameboard/body */
+/* Gameboard */
 .gameboard { 
     width: 50vh;
     height: 40vh;
     font-family: Helvetica;
     display: grid;
-    grid-template-rows: 75px 150px auto auto;
+    grid-template-rows: 150px auto auto auto;
     grid-template-columns: 1fr;
     align-content: space-evenly;
     justify-items: center;
@@ -123,7 +96,7 @@ label.active:before {
 .instructions {
     padding-left: 40px;
     padding-right: 40px;
-    color:rgba(184, 15, 15, 0.886);
+    color:rgba(205, 241, 63, 0.886);
     font-family: 'Righteous', cursive;
     grid-area: instructions;
 }
@@ -145,6 +118,68 @@ label.active:before {
     border-top-left-radius: 13px;
     grid-area: list;
 }
+
+
+
+/* dark mode */
+label {
+    position: absolute;
+    width: 45px;
+    height: 26px;
+    right: 20px;
+    top: 40px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+label:before { /* Setup for toggle/button position including transition*/
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    content: ":D";
+    width: 20px;
+    left: 1px;
+    top: 1px;
+    border-radius: 38%;
+    background-color: #000;
+    cursor: pointer;
+    transition: 1s;
+}
+
+label.active:before { /*  When toggled, adjusts to the styles below.*/
+    color: black;
+    left: 18px;
+    background: #fff;
+}
+
+/* What gets changed in darkmode, applying the night class to the body. */
+body.night {
+    background-color: rgb(6, 32, 30);
+    color: #7d6c84;
+}
+.instructions.night {
+    background-color: #7d6c84;
+    color: rgb(0, 0, 0);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.interactions.night {
+    background-color: #fbfcfc;
+}
+
+.wordgame.night {
+    background-color: transparent;
+    color: rgb(193, 33, 129);
+    border: none;
+}
+
+
+
+
+
+
+
+
+
 
 
 
