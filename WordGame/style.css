@@ -6,6 +6,7 @@
 
 }
 body {
+    margin: auto;
     background-color: rgb(133, 131, 131);;
     display: flex;
     justify-content: center;
@@ -13,8 +14,7 @@ body {
     margin-top: 20px;
 }
   
-.gameboard {
-    
+.gameboard { 
     width: 50vh;
     height: 80vh;
     font-family: Helvetica;
@@ -29,6 +29,8 @@ body {
         "interactions"
         "list"
     }
+
+
 
 .wordgame {
     position: absolute;

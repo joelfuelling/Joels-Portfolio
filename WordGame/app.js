@@ -12,12 +12,12 @@ function myTimer() {
 }
 
 function resetCountdown() {
-  wordsUsed = []
+  alert(resetMessage())
   clearInterval(timerInterval)
+  wordsUsed = []
   timerInterval = null
   sec = 60
   timer.innerHTML = "Start Countdown"
-  newWordInputElement.defaultValue = "Click timer ^";
 }
 
 
@@ -85,27 +85,29 @@ newWordInputElement.addEventListener("keydown", (evt) => {
     }
 })
 
+// Try to use DRY methodology below!
 
 countdown.addEventListener('click', () => {
-  if (!timerInterval) { // if false is true
+  if (!timerInterval) { // if there is no timer running, clear the 2 variables below and start the timer.
     newWordInputElement.value = ""
     wordsListElement.innerHTML = ""
     timerInterval = setInterval(myTimer, 1000) // setInterval (run the specificed function (myTimer), every second (1000 miliseconds), starting at 60
-  } else { // Clicking the button (while the above if is "running") clears the input field, the list, and resets the countdown.
+  } else { // Clicking the button (while the above if is "running") clears the input field, the list, and resets the countdown (which now displays an alert message, calledback in the function).
     newWordInputElement.value = ""
     wordsListElement.innerHTML = ""
     resetCountdown()
-    alert("Better luck next time!")   
   }
 })
 
-// I want to try to get a random game message (from the array below) to appear when the resetCountdown
+// Alert message is now a random one from the array below. I was trying to think of a fun way to make a 60 second game have more replayability. Why not some light hearted messages between rounds?
 
-let resetCountdownAlertMessages = ["Better luck next time!", "That's OK, you can try again", "How did you do??", "GAME OVER", "PLAYER: 0 lives left", "Try playing without a mouse ;)", "Did you know, the average landspeed velocity of a unladed swallow is 24 miles per hour, or 11 meters per second?", "Deep breathe in, pause and hold - aaaaaaaaand a deep breathe out"]
+const resetCountdownAlertMessages = ["Better luck next time!", "That's OK, you can try again", "How did you do??", "GAME OVER", "PLAYER: 0 lives left", "Try playing without a mouse ;)", "Did you know, the average landspeed velocity of a unladed swallow is 24 miles per hour, or 11 meters per second?", "Deep breathe in, pause and hold...aaaaaaaaand a deep breathe out"]
 
-function resetMessage () {
-  math.floor(math.random())
+function resetMessage() { // Working! I was passing the array in before as a parameter, not necessary as we're simply returning a random index of the array, which is already defined.
+  return resetCountdownAlertMessages[Math.floor(Math.random()*resetCountdownAlertMessages.length)] // 1st actual time I've used the math outside fo the GA prework CSS Robot/random color generator. I had to google it. Although, I the syntax correct up until after the 'random()' I couldn't remember how to pull the value out of the array.
 }
+
+
 
  
 
