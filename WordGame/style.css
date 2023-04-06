@@ -1,25 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-* {
 
-    /* height & width now includes border & padding */
+
+@media screen and (max-width: 500px) {
+
+    body {
+        background-color:rgba(219, 191, 143, 0.472)
+    }
+
+    label {
+        position: absolute;
+        width: 40px;
+    }
+    
+    .gameboard {
+        align-content: center;
+    }
+    
+    .wordgame { 
+        position: absolute;
+        width: 80%;
+        left: 0;
+        font-style: oblique;
+        background-color: black; 
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Righteous', cursive;
+        border: 8px double rgba(216, 148, 96, 0.68);
+        border-radius: 40px;
+        grid-area: title;
+    }
+    
+    .countdown, .input, .button {
+            text-align: center;
+    }
+    
+    .instructions {
+        font-size: 14px;
+        width: 100%;
+        color:rgba(184, 15, 15, 0.886);
+        font-family: 'Righteous', cursive;
+        grid-area: instructions;
+        }
+    }
+
+
+
+* { /* height & width now includes border & padding */
     box-sizing: border-box;
-
 }
+
 body {
     margin: auto;
-    background-color: rgb(133, 131, 131);;
+    background-color: rgb(172, 167, 167);;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
-  
+
+/* dark mode */
+label {
+    position: absolute;
+    width: 45px;
+    height: 26px;
+    right: 20px;
+    top: 40px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+label:before {
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    content: "hi!";
+    width: 20px;
+    height: 20px;
+    left: 1px;
+    top: 1px;
+    border-radius: 38%;
+    cursor: pointer;
+    background-color: #000;
+    transition: 0.4s;
+}
+
+label.active:before {
+    left: 18px;
+    background: #fff;
+}
+/* Gameboard/body */
 .gameboard { 
     width: 50vh;
-    height: 80vh;
+    height: 40vh;
     font-family: Helvetica;
     display: grid;
-    grid-template-rows: 75px 150px auto 50px;
+    grid-template-rows: 75px 150px auto auto;
     grid-template-columns: 1fr;
     align-content: space-evenly;
     justify-items: center;
@@ -30,13 +105,12 @@ body {
         "list"
     }
 
-
-
 .wordgame {
     position: absolute;
+    left: 30px;
     margin: 8px;  
     background-color: white;
-    width: 90%;
+    width: 75%;
     text-align: center;
     font-size: 42px;
     font-family: 'Righteous', cursive;
@@ -69,43 +143,8 @@ body {
     border: 2px solid rgba(184, 15, 15, 0.206);
     border-bottom-right-radius: 13px;
     border-top-left-radius: 13px;
+    grid-area: list;
 }
 
 
-.wordgame, .instructions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-@media screen and (max-width: 500px){
-body {
-    background-color:rgba(219, 191, 143, 0.472)
-}
-.gameboard {
-    align-content: center;
-}.wordgame { 
-    position: relative;
-    font-style: oblique;
-    background-color: black; 
-    width: 85%%;
-    text-align: center;
-    font-size: 40px;
-    font-family: 'Righteous', cursive;
-    border: 8px double rgba(216, 148, 96, 0.68);
-    border-radius: 40px;
-    grid-area: title;
-    color: white;
-    }
-.countdown, .input, .button {
-        text-align: center;
-}
-.instructions {
-    font-size: 14px;
-    width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-    color:rgba(184, 15, 15, 0.886);
-    font-family: 'Righteous', cursive;
-    grid-area: instructions;
-}}

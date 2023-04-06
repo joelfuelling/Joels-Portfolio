@@ -1,3 +1,17 @@
+// Dark mode functionality.
+
+let darkBox = document.getElementsByTagName('body')[0];
+let darkMode = document.getElementById('dark-mode')
+
+darkMode.addEventListener("click", function() {
+  darkMode.classList.toggle('active')
+  darkBox.classList.toggle('night')
+})
+
+
+
+// Game timer fucntion conditions and reset function.
+
 let sec = 60
 let timerInterval
 const countdown = document.querySelector("#timer")
@@ -72,6 +86,8 @@ function respondToWordSubmit(){
 }
 
 
+
+
 // SET UP EVENT LISTENERS
 addWordButtonElement.addEventListener("click", respondToWordSubmit) 
 
@@ -103,9 +119,12 @@ countdown.addEventListener('click', () => {
 
 const resetCountdownAlertMessages = ["Better luck next time!", "That's OK, you can try again", "How did you do??", "GAME OVER", "PLAYER: 0 lives left", "Try playing without a mouse ;)", "Did you know, the average landspeed velocity of a unladed swallow is 24 miles per hour, or 11 meters per second?", "Deep breathe in, pause and hold...aaaaaaaaand a deep breathe out"]
 
-function resetMessage() { // Working! I was passing the array in before as a parameter, not necessary as we're simply returning a random index of the array, which is already defined.
-  return resetCountdownAlertMessages[Math.floor(Math.random()*resetCountdownAlertMessages.length)] // 1st actual time I've used the math outside fo the GA prework CSS Robot/random color generator. I had to google it. Although, I the syntax correct up until after the 'random()' I couldn't remember how to pull the value out of the array.
+
+// Working! I was passing the array in before as a parameter, not necessary as we're simply returning a random index of the array, which is already defined.
+function resetMessage() { 
+  return resetCountdownAlertMessages[Math.floor(Math.random()*resetCountdownAlertMessages.length)] 
 }
+// 1st actual time I've used the math outside fo the GA prework CSS Robot/random color generator. I had to google it. Although, I the syntax correct up until after the 'random()' I couldn't remember how to pull the value out of the array.
 
 
 
