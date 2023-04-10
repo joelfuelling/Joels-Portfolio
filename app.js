@@ -8,28 +8,32 @@ const dropdownBtn = document.querySelector(".dropbutton-class")
 
 const dropdownMenu = document.querySelector(".dropdown-links")
 
-// Setup the class toggle by the button click.
-dropdownBtn.addEventListener("click", function(evt) {
-    dropdownMenu.classList.toggle('show')
+const toggleMenu = function() { // Creating function to reuse when toggle to close menu when link is clicked, and (not built yet) to close menu when outside of the menu is clicked.
+    dropdownMenu.classList.toggle("show")
+}
+
+// Click the button, toggle the menu.
+dropdownBtn.addEventListener("click", function() {
+    toggleMenu()
 });
 
 
-
-// Closing the dropdown menu when a link is clicked.
-
-// dropdownMenu.forEach((link) => {
-
-// })
-
-// // Setting up the menu to close if clicked outside of it?
-
-const body = document.querySelector("body")
-
-body.addEventListener("click", function (evt) {
-    if(evt.target === dropdownMenu && dropdownMenu.classList === "show") {
-        dropdownMenu.classList.toggle('show')
+document.addEventListener("click", function(event) {
+    // Is teh clicked element outside, or inside the button/menu?
+    if (!dropdownMenu.contains(event.target) && !dropdownBtn.contains(event.target)) { // If the click is NOT the button, or the menu... 
+      dropdownMenu.classList.remove("show") // Remove "show"/close the dropdown list. 
     }
-})
+  })
+
+
+// Setup a DOM object of 'All' the dropdown links. When any of them are clikced (forEach), toggle the menu - WORKING
+const dropdownLinks = document.querySelectorAll(".dropdown-links a")
+    dropdownLinks.forEach(link => {
+        link.addEventListener("click", function(){
+            toggleMenu()
+        })
+    })
+    
 
 
 // Super simple slide show that *should* rotate through 3 pictures every 3 seconds. I used the setInterval because I had a lot of fun making the 60 second countdown timer for the wordgame and I wanted to use the function again because it's an elegant way to keep a function moving/repeating.

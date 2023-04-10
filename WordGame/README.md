@@ -18,7 +18,7 @@ Wednesday - 4/3/2023
     - https://stackoverflow.com/questions/3396754/onkeypress-vs-onkeyup-and-onkeydown
     - https://www.google.com/search?q=how+to+clear+input+field+when+clicked+on&oq=how+to+clear+input+field+when+clicked+on&aqs=chrome..69i57j33i160j33i299j33i22i29i30.4608j0j7&sourceid=chrome&ie=UTF-8
 
-Thurday - 4/4/2023
+Thursday - 4/4/2023
     - It's not pretty but the button works! I was "stuck" for a couple hours trying to figure out how to target other classes within the class change response but then realized I wasn't targeting them with the DOM :/ I recreated 2 other DOM variables for the instructions and wordgame box, which now both change with the darkmode toggle.
     - in combo with the Information from the youtube video (below), I plugged the following question in chatGPT with my CSS as a reference: "I'm trying to make a simple toggle button (HTML below). Could you please explain the "label:before" CSS property to me in detail? I've never seen it before." It's response is indented below... 
     - NOTE: (**SOME TEXT**) are my notes/comments.
@@ -26,7 +26,7 @@ Thurday - 4/4/2023
         - The label:before CSS property is used to style a pseudo-element (::before) that is inserted before the content of a label element. 
             - (**I've never seen label used before that I can remember. The youtube video started off with it and I wanted to know why, rather than using a div or h1/header/etc. This is a cool "trick" for buttobns, sliders and interacive elements and suite my purpose well for a beginner.**)
 
-        - In your case, the label:before CSS styles are used to create the circular button of the toggle. The content property sets the content of the pseudo-element to an empty string, which means that no content will be displayed (**I changed mine to a smiley face**). The position property sets the position of the pseudo-element to absolute, which means that the element will be positioned relative to the nearest positioned ancestor (in this case, the label element). Simple enough, we've gone ove that in CSS labs and designed on other projects already**
+        - In your case, the label:before CSS styles are used to create the circular button of the toggle. The content property sets the content of the pseudo-element to an empty string, which means that no content will be displayed (**I changed mine to a smiley face**). The position property sets the position of the pseudo-element to absolute, which means that the element will be positioned relative to the nearest positioned ancestor (in this case, the label element). (**Simple enough, we've gone ove that in CSS labs and designed on other projects already**)
 
         - The width and height properties set the size of the button, while the left and top properties set its position within the label element. The border-radius property is set to 50%, which makes the button circular, and the cursor property is set to pointer, which changes the cursor to a hand icon when the button is hovered over.
             - (**I knew this part, basic CSS. I altered the design.**)

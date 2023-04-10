@@ -1,49 +1,7 @@
-@media screen and (max-width: 500px) {
-
-    .navbar-face {
-        margin-top: 4px;
-        margin-left: -40px;
-        max-height: 65px;
-    }
-
-    #top-navbar { 
-        height: 65px;
-        background-color: rgb(121, 80, 27);
-    }
-
-    .nav-buttons {
-        display: none;
-    }
-
-    .dropmenu {
-        z-index: 1;
-        background: transparent; 
-        width: 4em;
-    }
-
-    #slideshow-container {
-        display: none;
-    }
-
-    .headerface {
-        padding-top: 20px;
-        display: none;
-    }
-     
-    .contents {
-        font-size: 14px;
-    }
-
-    .projectboxes {
-        margin-top: 8px;
-    }
-
-}
 
 
 *{
     margin: 0;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* border: 1px solid pink; */
     font-family: Tahoma;
 }
@@ -71,6 +29,11 @@ body {
     justify-content: space-around;
  
 }
+
+.myName {
+    display: none;
+    margin-left: 90px;
+}
 .header-items {
     display: flex;
     align-items: center;
@@ -84,8 +47,8 @@ body {
     background-color: rgb(121, 80, 27);
     color: antiquewhite;
     cursor: pointer;
+    transition: 0.3s;
 }
-
 
 .nav-buttons:hover, .project-buttons:hover {
     border-color: #1d1928;
@@ -93,34 +56,35 @@ body {
     color: #286595;
 }
 
-
-.myface {
-    display: relative;
-    justify-content: center;
-    height: 16vh;
+.dropbutton-class {
+    border-radius: 10px;
+    border-color:rgb(27, 20, 11);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .burger {
-    background: transparent;
     margin-top: 6px;
     width: 4em;
 }
 
 .dropmenu {
     z-index: 1;
+    display: none;
 }
+.navbar-face {
+    display: none;
+}
+
 .headerface {
-    z-index: -1;
-    height: 225px;
     background-color: rgba(28, 33, 40, 1);
 }
 
 .section-title {
+    margin: 35px;
     text-align: center;
-    font-size: 20px;
-    padding: 1.2em;
-    border-bottom: 4px dotted rgb(96, 78, 55);
-    border-radius: 20px;
+    font-size: 20px;   
 }
 
 .contents {
@@ -146,6 +110,10 @@ body {
     margin-bottom: 15px;
 }
 
+.slideshow-pictures {
+    max-height: 20vh;
+}
+
 footer {
     border-top: .2em solid rgb(14, 14, 18);  
     padding-top: 30px;
@@ -156,14 +124,16 @@ footer {
 
 /* drop down menu - WORK IN PROGRESS
 
-/* 1 - Hide the links to start and setup position */
+/* 1 - Hide the links to start and setup position to the parent container. */
 .dropdown-links {
     display: none;
     position: absolute;
 }
 
 /* 2 - Setup the dropdown links */
-.dropdown-links a { /* OK - We got it to show up! But, it's behind the header box even with z-index 3*/
+.dropdown-links a {
+    width: 80%;
+    margin: .2em;
     position: relative;
     font-size: 16px;
     display: block;
@@ -183,23 +153,56 @@ footer {
     display: block;
 }
 
+@media screen and (max-width: 500px) {
 
+    .navbar-face {
+        display: block;
+        padding-top: .4em;
+        height: 50px;
+    }
 
+    .nav-buttons {
+        display: none;
+    }
 
+    .myName {
+        display: block;
+        margin-left:90px;
+    }
 
+    .dropmenu {
+        display: block;
+        z-index: 1;
+        background: transparent; 
+        width: 4em;
+    }
 
+    #slideshow-container {
+        display: none;
+    }
 
+    .headerface {
+        display: none;
+    }
+     
+    .contents {
+        font-size: 14px;
+    }
 
-
-
-
-
+    .projectboxes {
+        margin-top: 8px;
+    }
+}
 
 /* Desktop mode */
 
 @media screen and (min-width: 1024px) {
 
     .dropmenu { 
+        display: none;
+    }
+
+    .navbar-face {
         display: none;
     }
 }

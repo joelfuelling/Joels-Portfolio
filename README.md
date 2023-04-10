@@ -1,10 +1,10 @@
 # Joels-Portfolio
 Joels Portfolio website created during General Assembly Software Development Immersive bootcamp - week 3.
-# Saturday/Sunday (3/1/23) 
+# Saturday/Sunday (4/1/23) 
 
 So far, lots of class notes, rewatching some video portions (functions, arrays, iterators, JS stuff mostly), and google searches (links below)
 
-Saturday/Sunday (3/1/23) - Added starting layout using mobile first methodology.
+Saturday/Sunday (4/1/23) - Added starting layout using mobile first methodology.
     - The main addition is the (incomplete) 'setInterval(Slideshow, 3000) function'. Getting it to "start over" was the challenge. The modulus operator came in very handy but it's not done...
     - It starts with all 3 loaded up (because they're on the HTML), but I don't want that. Not sure how to fix it but I'll look at it.
     - I want them to show up one at a time, for 3 seconds each, not all at once, and flexing to and from.
@@ -23,9 +23,9 @@ Saturday/Sunday (3/1/23) - Added starting layout using mobile first methodology.
     - https://unpkg.com/@primer/css@^18.0.0/dist/primer.css
     Class notes and videos around functions, lists, and DOM manipulation.
 
-# Monday (3/2/23)
+# Monday (4/2/23)
 
-Monday (3/2/23) 
+Monday (4/2/23) 
     - With some help by Angel in slack, I got the slideshow setup the way I want it now. I had to put the (mySlides[slide index].style.display = "block") outside the function so that the 1st image would show up before the slideShow function begins.
     - Navbar is locked to the top of screen.
     - burger menu icon still showing up in between mobile and large desktop views.
@@ -42,9 +42,9 @@ Monday (3/2/23)
     - https://replit.com/@JoelFuelling/Dropdown-Menu-Lab-3#style.css
     - https://stackoverflow.com/questions/8762201/how-to-get-the-cursor-to-change-to-the-hand-when-hovering-a-button-tag
 
-# Tuesday (3/3/23)
+# Tuesday (4/3/23)
 
-Tuesday (3/3/23)
+Tuesday (4/3/23)
     - Nav bar dropdown is working! Ryan gave me feedback on what 4 main things to know for selecting objects and changing classes via Slack, including classToggle, and that helped a lot.
     
     - Need to add functionality for closing menu based off "not wanting to click a link" option once menu is open.
@@ -59,9 +59,26 @@ Tuesday (3/3/23)
     - https://www.google.com/search?sxsrf=APwXEdcWr8KG_e-MonPrYM1fyPMsSgz2zw:1680631005445&q=what+can+override+z-index+in+CSS&spell=1&sa=X&ved=2ahUKEwifws-w5pD-AhVnlIkEHbcvCawQBSgAegQIBxAB&biw=1129&bih=893&dpr=2#kpvalbx=_3mQsZMGlN7unptQP_eaoiAY_30
     - https://github.com/takis-fuego-cohort/lessons-and-labs/blob/main/Unit_1/07-js-continued/7.5-js-this-keyword.md (using this in the global space)
 
-# Wednesday (3/3/23)
+# Wednesday (4/3/23)
 
-Wednesday (3/3/23) 
+Wednesday (4/3/23) 
     - See WordGame README for changes made to game functionality.
     Some resources used so far today.
     - https://github.com/takis-fuego-cohort/lessons-and-labs/blob/main/Unit_1/04-dom/4.1.1-dom-menu-lab-part-1.md
+
+# Thursday (4/4/23)
+
+    - See Wordgame README.
+
+# Friday (4/5/23)
+
+    - Dropdown menu now closes when you click outside of it. Used an if(!no menu && !nobutton are the clicked object) conditional. I was attempting to use window.addEvent, or this.addEvent, but they were conflicting with any click made, which makes sense. I was not being specific enough to the condition of the menu being open, and it being "its own thing" outside of the entire document.
+    - Using .contains() and putting the click event inside is a nice functional combo.
+    - Finally got the display none/BLOCK CSS setup between mobile and non-mobile. I was mixing up (display: "block"), with (display: "show")
+    - Pictures of Ruby and Zelda added :D.
+    - Adjusted dropdown menu button CSS to better match page style.
+    
+
+    Resources used today.
+    - DOM lab review.
+    - https://stackoverflow.com/questions/50465697/closing-dropdown-by-clicking-outside-in-javascript-tutorial-clarification
