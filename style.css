@@ -1,8 +1,5 @@
-
-
 *{
     margin: 0;
-    /* border: 1px solid pink; */
     font-family: Tahoma;
 }
 
@@ -31,8 +28,8 @@ body {
 }
 
 .myName {
+    position: relative;
     display: none;
-    margin-left: 90px;
 }
 .header-items {
     display: flex;
@@ -112,14 +109,13 @@ body {
 
 .slideshow-pictures {
     max-height: 20vh;
-    min-height: 20vh
 }
 
 footer {
     border-top: .2em solid rgb(14, 14, 18);  
     padding-top: 30px;
     color:rgb(136, 103, 59);
-    font-size: 15px;
+    font-size: 12px;
     height: 50px;
 }
 
@@ -134,19 +130,25 @@ footer {
 /* 2 - Setup the dropdown links */
 .dropdown-links a {
     width: 80%;
+    height: 20px;
     margin: .2em;
     position: relative;
     font-size: 16px;
     display: block;
     padding: 6px;
     text-decoration: none;
-    border-color:aliceblue;
     background-color: rgb(121, 80, 27);
     color: antiquewhite;
     }
 
 #dropdown-content {
+    border-radius: 2px solid an
     width: 85px;
+}
+
+/* 3 - Setup the format for when links are shown*/
+.show {
+    display: block;
 }
 
 @media screen and (max-width: 500px) {
@@ -183,6 +185,10 @@ footer {
      
     .contents {
         font-size: 14px;
+    }
+
+    .projectboxes {
+        margin-top: 8px;
     }
 }
 
