@@ -82,3 +82,7 @@ Wednesday (4/3/23)
     Resources used today.
     - DOM lab review.
     - https://stackoverflow.com/questions/50465697/closing-dropdown-by-clicking-outside-in-javascript-tutorial-clarification
+
+
+Sunday 4/7/23
+    - Was going to rework slideshow function for 4 pictures but no change was needed because Modulo is being used. Slides
