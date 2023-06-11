@@ -143,13 +143,24 @@ footer {
     }
 
 #dropdown-content {
-    border-radius: 2px solid an
-    width: 85px;
+    border-radius: solid 2px white;
+    /* width: 85px; */
 }
 
 /* 3 - Setup the format for when links are shown*/
 .show {
     display: block;
+}
+
+.skills-contents{
+    margin-top: 3vh;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills-image {
+    margin: .4rem;
+    height: 5vh;
 }
 
 @media screen and (max-width: 500px) {
@@ -190,6 +201,10 @@ footer {
 
     .projectboxes {
         margin-top: 8px;
+    }
+    .skills-image {
+        margin: .3rem;
+        height: 3vh;
     }
 }
 
