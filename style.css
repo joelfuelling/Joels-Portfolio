@@ -152,15 +152,28 @@ footer {
     display: block;
 }
 
-.skills-contents{
-    margin-top: 3vh;
-    justify-content: center;
+.skills-grid{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-contents{
+    max-width: 80%;
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .skills-image {
     margin: .4rem;
     height: 5vh;
+}
+
+.skills-grid {
+    margin-top: 5%;
 }
 
 @media screen and (max-width: 500px) {
