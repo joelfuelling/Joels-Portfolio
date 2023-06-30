@@ -1,236 +1,236 @@
-*{
-    margin: 0;
-    font-family: Tahoma;
+* {
+  margin: 0;
+  font-family: Tahoma;
 }
 
 body {
-    margin: auto;
-    color:antiquewhite;
-    background-color: rgba(28, 33, 40, 1);
-    text-align: center;
-    align-content: center;
-    display: grid;
+  margin: auto;
+  color: antiquewhite;
+  background-color: rgba(28, 33, 40, 1);
+  text-align: center;
+  align-content: center;
+  display: grid;
 }
 
 .headergap {
-    height: 65px;
+  height: 65px;
 }
 
 .header-nav {
-    background-color: #333;
-    position: fixed;
-    width: 100%;
-    height: 65px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
- 
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .myName {
-    position: relative;
-    display: none;
+  position: relative;
+  display: none;
 }
 .header-items {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.nav-buttons, .project-buttons {
-    border-radius: 6px;
-    font-size: 18px;
-    padding: 7px 12px;
-    border-color:aliceblue;
-    background-color: rgb(121, 80, 27);
-    color: antiquewhite;
-    cursor: pointer;
-    transition: 0.3s;
+.nav-buttons,
+.project-buttons {
+  border-radius: 25px;
+  font-size: 24px;
+  padding: 7px 12px;
+  border-color: aliceblue;
+  background-color: rgba(181, 119, 38, 0.859);
+  color: antiquewhite;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.nav-buttons:hover, .project-buttons:hover {
-    border-color: #1d1928;
-    background-color: antiquewhite;
-    color: #286595;
+.nav-buttons:hover,
+.project-buttons:hover {
+  border-color: #1d1928;
+  background-color: antiquewhite;
+  color: #286595;
+  box-shadow: 2px 2px 20px 1px #286595;
 }
 
 .dropbutton-class {
-    border-radius: 10px;
-    border-color:rgb(27, 20, 11);
-    background-color: transparent;
-    cursor: pointer;
-    transition: 0.3s;
+  border-radius: 10px;
+  border-color: rgb(27, 20, 11);
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .burger {
-    margin-top: 6px;
-    width: 4em;
+  margin-top: 6px;
+  width: 4em;
 }
 
 .dropmenu {
-    z-index: 1;
-    display: none;
+  z-index: 1;
+  display: none;
 }
 .navbar-face {
-    display: none;
+  display: none;
 }
 
 .headerface {
-    background-color: rgba(28, 33, 40, 1);
+  background-color: rgba(28, 33, 40, 1);
 }
 
 .section-title {
-    margin: 35px;
-    text-align: center;
-    font-size: 20px;   
+  margin: 40px;
+  text-align: center;
+  font-size: 35px;
 }
 
 .contents {
-    margin: auto;
-    max-width: 600px;
-    overflow: auto;
+  font-size: 28px;
+  margin: auto;
+  max-width: 600px;
+  overflow: auto;
 }
 
 .slideshow-pictures {
-    display: none;
-    padding: 80px 0;
-    max-width: 292px;
-    max-height: 440px;
-    display: relative;
-    margin: auto;
+  display: none;
+  padding: 80px 0;
+  max-width: 292px;
+  max-height: 440px;
+  display: relative;
+  margin: auto;
 }
 
 .projects {
-    margin: 20px;
+  margin: 20px;
 }
 
 .projectboxes {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .slideshow-pictures {
-    min-height: 20vh;
-    max-height: 20vh;
+  min-height: 20vh;
+  max-height: 20vh;
 }
 
 footer {
-    border-top: .2em solid rgb(14, 14, 18);  
-    padding-top: 30px;
-    color:rgb(136, 103, 59);
-    font-size: 12px;
-    height: 50px;
+  border-top: 0.2em solid rgb(14, 14, 18);
+  padding-top: 30px;
+  color: rgb(136, 103, 59);
+  font-size: 12px;
+  height: 50px;
 }
 
 /* drop down menu - WORK IN PROGRESS
 
 /* 1 - Hide the links to start and setup position to the parent container. */
 .dropdown-links {
-    display: none;
-    position: absolute;
+  display: none;
+  position: absolute;
 }
 
 /* 2 - Setup the dropdown links */
 .dropdown-links a {
-    width: 80%;
-    height: 20px;
-    margin: .2em;
-    position: relative;
-    font-size: 16px;
-    display: block;
-    padding: 6px;
-    text-decoration: none;
-    background-color: rgb(121, 80, 27);
-    color: antiquewhite;
-    }
+  width: 80%;
+  height: 20px;
+  margin: 0.2em;
+  position: relative;
+  font-size: 16px;
+  display: block;
+  padding: 6px;
+  text-decoration: none;
+  background-color: rgb(121, 80, 27);
+  color: antiquewhite;
+}
 
 #dropdown-content {
-    border-radius: solid 2px white;
-    /* width: 85px; */
+  border-radius: solid 2px white;
+  /* width: 85px; */
 }
 
 /* 3 - Setup the format for when links are shown*/
 .show {
-    display: block;
-}
-
-.skills-grid{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.skills-contents{
-    max-width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.skills-image {
-    margin: .4rem;
-    height: 5vh;
+  display: block;
 }
 
 .skills-grid {
-    margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-contents {
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.skills-image {
+  margin: 0.4rem;
+  height: 5vh;
+}
+
+.skills-grid {
+  margin-top: 5%;
 }
 
 @media screen and (max-width: 500px) {
+  .navbar-face {
+    display: block;
+    padding-top: 0.4em;
+    height: 50px;
+  }
 
-    .navbar-face {
-        display: block;
-        padding-top: .4em;
-        height: 50px;
-    }
+  .nav-buttons {
+    display: none;
+  }
 
-    .nav-buttons {
-        display: none;
-    }
+  .myName {
+    display: block;
+    margin-left: 40px;
+  }
 
-    .myName {
-        display: block;
-        margin-left:90px;
-    }
+  .dropmenu {
+    display: block;
+    z-index: 1;
+    background: transparent;
+    width: 4em;
+  }
 
-    .dropmenu {
-        display: block;
-        z-index: 1;
-        background: transparent; 
-        width: 4em;
-    }
+  #slideshow-container {
+    display: none;
+  }
 
-    #slideshow-container {
-        display: none;
-    }
+  .headerface {
+    display: none;
+  }
 
-    .headerface {
-        display: none;
-    }
-     
-    .contents {
-        font-size: 14px;
-    }
+  .contents {
+    font-size: 14px;
+  }
 
-    .projectboxes {
-        margin-top: 8px;
-    }
-    .skills-image {
-        margin: .3rem;
-        height: 3vh;
-    }
+  .projectboxes {
+    margin-top: 8px;
+  }
+  .skills-image {
+    margin: 0.3rem;
+    height: 3vh;
+  }
 }
 
 /* Desktop mode */
 
 @media screen and (min-width: 1024px) {
+  .dropmenu {
+    display: none;
+  }
 
-    .dropmenu { 
-        display: none;
-    }
-
-    .navbar-face {
-        display: none;
-    }
+  .navbar-face {
+    display: none;
+  }
 }
-
