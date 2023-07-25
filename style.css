@@ -178,11 +178,13 @@ footer {
 }
 
 .skills-contents {
+  padding-top: 3%;
   max-width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  border-top: 1px solid antiquewhite;
 }
 .skills-image {
   margin: 0.4rem;
@@ -262,7 +264,7 @@ footer {
 
 /* Mobile view */
 
-@media screen and (max-width: 832px) {
+@media screen and (max-width: 1050px) {
   .contents {
     font-size: 24px;
     margin: auto;
