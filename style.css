@@ -170,6 +170,7 @@ footer {
   display: block;
 }
 
+
 .skills-grid {
   display: flex;
   flex-direction: row;
@@ -178,6 +179,7 @@ footer {
 }
 
 .skills-contents {
+
   padding-top: 3%;
   max-width: 80%;
   display: flex;
@@ -187,6 +189,8 @@ footer {
   border-top: 1px solid antiquewhite;
 }
 .skills-image:not(:hover) {
+  position: relative;
+  z-index: -1;
   margin: 0.4rem;
   height: 7vh;
   transition: ease-in-out 0.15s;
